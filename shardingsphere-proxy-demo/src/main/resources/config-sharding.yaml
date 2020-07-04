@@ -1,0 +1,39 @@
+schemaName: sharding_db
+
+dataSources:
+  ds_0:
+    url: jdbc:mysql://127.0.0.1:3306/user_db_1?serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456
+    connectionTimeoutMilliseconds: 30000
+    idleTimeoutMilliseconds: 60000
+    maxLifetimeMilliseconds: 1800000
+    maxPoolSize: 50
+  ds_1:
+    url: jdbc:mysql://127.0.0.1:3306/user_db_2?serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456
+    connectionTimeoutMilliseconds: 30000
+    idleTimeoutMilliseconds: 60000
+    maxLifetimeMilliseconds: 1800000
+    maxPoolSize: 50
+
+shardingRule:
+  tables:
+    t_user:
+      actualDataNodes: ds_${0..1}.t_user_${1..2}
+      tableStrategy:
+        inline:
+          shardingColumn: id
+          algorithmExpression: t_user_${id % 2 + 1}
+      keyGenerator:
+        type: SNOWFLAKE
+        column: id
+  bindingTables:
+  - t_user
+  defaultDatabaseStrategy:
+    inline:
+      shardingColumn: role_id
+      algorithmExpression: ds_${role_id % 2}
+  defaultTableStrategy:
+    none:
