@@ -1,8 +1,8 @@
 package com.sun.dubbo;
 
-import com.sun.common.bean.Payment;
-import com.sun.common.service.PaymentService;
-import com.sun.common.vo.ResultVo;
+import com.sun.dubbo.bean.Payment;
+import com.sun.dubbo.service.PaymentService;
+import com.sun.dubbo.vo.ResultVo;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;

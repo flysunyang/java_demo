@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sun.dubbo.mapper.PaymentMapper">
+
+    <select id="findAll" resultType="com.sun.dubbo.bean.Payment">
+        SELECT id, payment_name, price
+        FROM t_payment
+    </select>
+
+</mapper>
