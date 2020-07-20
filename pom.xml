@@ -11,6 +11,7 @@
     <modules>
         <module>boot-mapstruct-sample</module>
         <module>boot-webmvc-sample</module>
+        <module>boot-webflux-sample</module>
     </modules>
 
 
