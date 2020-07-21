@@ -12,6 +12,8 @@
         <module>boot-mapstruct-sample</module>
         <module>boot-webmvc-sample</module>
         <module>boot-webflux-sample</module>
+        <module>boot-session-sample</module>
+        <module>boot-swagger</module>
     </modules>
 
 
