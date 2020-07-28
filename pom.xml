@@ -14,6 +14,7 @@
         <module>boot-webflux-sample</module>
         <module>boot-session-sample</module>
         <module>boot-swagger</module>
+        <module>boot-validation-sample</module>
     </modules>
 
 
