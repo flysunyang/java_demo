@@ -15,6 +15,7 @@
         <module>boot-session-sample</module>
         <module>boot-swagger</module>
         <module>boot-validation-sample</module>
+        <module>boot-websocket-sample</module>
     </modules>
 
 
