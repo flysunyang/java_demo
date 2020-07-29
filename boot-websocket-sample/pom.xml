@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>boot-websocket-tomcat-demo</module>
+        <module>boot-websocket-spring-demo</module>
     </modules>
     <groupId>com.sun.java</groupId>
     <version>1.0-SNAPSHOT</version>
